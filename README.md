@@ -1,28 +1,26 @@
-# sharepoint-sync
-# 🔄 SharePoint Sync with OAuth
+# 📁 SharePoint Sync with Basic Credentials
 
-Sincroniza archivos desde una carpeta de SharePoint Online a una ubicación local en Ubuntu, usando autenticación moderna OAuth y Python.
+Este proyecto permite sincronizar archivos desde una carpeta de SharePoint Online a una carpeta local en Ubuntu, utilizando autenticación directa con usuario y contraseña en Python — sin necesidad de Azure AD ni OAuth.
 
 ---
 
 ## 🚀 Características
 
-- Autenticación segura mediante OAuth 2.0 (Azure AD)
-- Descarga unidireccional de archivos (`.pdf`, `.docx`, `.txt`)
-- Compatible con tareas programadas usando `cron`
-- Estructura modular para escalabilidad
-- Registro de sincronización en consola
+- Sincronización unidireccional desde SharePoint ➡️ carpeta local
+- Descarga de archivos con extensiones `.pdf`, `.docx`, y `.txt`
+- Autenticación simple mediante usuario y contraseña
+- Integración con `cron` para ejecución automática diaria
+- Modular y listo para expandirse
 
 ---
 
 ## 🗂️ Estructura del Proyecto
 
 ```plaintext
-sharepoint_sync/
-│
-├── main.py                # Script principal
-├── auth_config.py         # Autenticación OAuth
-├── sharepoint_sync.py     # Lógica de sincronización
-├── requirements.txt       # Dependencias
-├── .env                   # Configuración privada
-└── README.md              # Documentación
+sharepoint_sync_basic/
+├── main.py              # Script principal
+├── sync_logic.py        # Lógica de descarga
+├── config.py            # Carga de configuración desde .env
+├── requirements.txt     # Dependencias del proyecto
+├── .env                 # Credenciales y rutas (privado)
+└── README.md            # Documentación del proyecto
